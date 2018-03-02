@@ -1,0 +1,25 @@
+{
+  "name": "node_optimizer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.16.2",
+    "http": "0.0.0",
+    "socket.io": "^2.0.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vigneshbv02/nodeoptimizer.git"
+  },
+  "author": "Vignesh B",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vigneshbv02/nodeoptimizer/issues"
+  },
+  "homepage": "https://github.com/vigneshbv02/nodeoptimizer#readme"
+}
