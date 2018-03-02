@@ -16,7 +16,8 @@ app.get('/',function(req,res){
 
 app.get('/node',function(req,res){
     console.log(req.query.data);
-    res.send("Data Received from "+req.query.data+" .");
+    console.log(req.query.via);
+    res.send("Data Received from "+req.query.data+" via"+req.query.via);
 });
 
 var server=http.listen(process.env.PORT || 5000,function(){
