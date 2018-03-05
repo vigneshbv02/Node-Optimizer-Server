@@ -6,9 +6,9 @@ var http=require('http').Server(app);
 var io=require('socket.io')(http);
 
 var data=0;
-var data1=0,data2=0,data3=0,data4=0,data5=0,;
+var data1=0,data2=0,data3=0,data4=0,data5=0;
 var node_no="";
-var ssid1="",ssid2="",ssid3="",ssid4="",ssid5="",;
+var ssid1="",ssid2="",ssid3="",ssid4="",ssid5="";
 
 app.use(bodyparser.json({limit: '50mb'}));
 app.use(bodyparser.urlencoded({limit: '50mb', extended: true}));
