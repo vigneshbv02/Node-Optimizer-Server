@@ -20,7 +20,7 @@ app.get('/',function(req,res){
 app.get('/node',function(req,res){
     console.log(req.query.data);
     console.log(req.query.via);
-    console.log(req.query.node_no);
+    console.log(req.query.nodeno);
     switch (node_no)
     {
         case "node1":
