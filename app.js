@@ -31,6 +31,7 @@ app.get('/node',function(req,res){
     console.log(req.query.nodeno);
     if(req.query.node_no==="node1")
     {
+        console.log("Sending data to socket for node 1");
         io.to("room01-nodeoptimizer").emit('node1',{'data':"Grocery level is LOW",'ssid':"nodeoptimizer"});
     }
     res.send("Data Received from "+req.query.data+" via"+req.query.via);
