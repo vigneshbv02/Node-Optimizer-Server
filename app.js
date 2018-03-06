@@ -29,33 +29,9 @@ app.get('/node',function(req,res){
     console.log(req.query.data);
     console.log(req.query.via);
     console.log(req.query.nodeno);
-    switch (node_no)
+    if(req.query.node_no==="node1")
     {
-        case "node1":
-            data1=data;
-            ssid1=via;
-            io.to("room01-nodeoptimizer").emit("node1",{'data':"Welcome to Node_Optimizer"});
-            break;
-        case "node2":
-            data2=data;
-            ssid2=via;
-            io.to("room01-nodeoptimizer").emit('node2',{'data':"data2",'ssid':"ssid2"});
-            break;
-        case "node3":
-            data3=data;
-            ssid3=via;
-            io.to("room01-nodeoptimizer").emit('node3',{'data':data3,'ssid':ssid3});
-            break;
-        case "node4":
-            data4=data;
-            ssid4=via;
-            io.to("room01-nodeoptimizer").emit('node4',{'data':data4,'ssid':ssid4});
-            break;
-        case "node5":
-            data5=data;
-            ssid5=via;
-            io.to("room01-nodeoptimizer").emit('node5',{'data':data5,'ssid':ssid5});
-            break;
+        io.to("room01-nodeoptimizer").emit('node1',{'data':"Grocery level is LOW",'ssid':"nodeoptimizer"});
     }
     res.send("Data Received from "+req.query.data+" via"+req.query.via);
 });
