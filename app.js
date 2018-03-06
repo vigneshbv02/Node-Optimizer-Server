@@ -34,7 +34,7 @@ app.get('/node',function(req,res){
         case "node1":
             data1=data;
             ssid1=via;
-            io.to("room01-nodeoptimizer").emit('node1',{'data':"data1",'ssid':"ssid1"});
+            io.to("room01-nodeoptimizer").emit("node1",{'data':"Welcome to Node_Optimizer"});
             break;
         case "node2":
             data2=data;
