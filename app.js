@@ -32,27 +32,27 @@ app.get('/node',function(req,res){
     if(req.query.nodeno==='node1')
     {
         console.log("Sending data to socket for node 1");
-        io.to("room01-nodeoptimizer").emit('node1',{'data':data,'ssid':via});
+        io.to("room01-nodeoptimizer").emit('node1',{'data':req.query.data,'ssid':req.query.via});
     }
     else if(req.query.nodeno==='node2')
     {
         console.log("Sending data to socket for node 1");
-        io.to("room01-nodeoptimizer").emit('node2',{'data':data,'ssid':via});
+        io.to("room01-nodeoptimizer").emit('node2',{'data':req.query.data,'ssid':req.query.via});
     }
     else if(req.query.nodeno==='node3')
     {
         console.log("Sending data to socket for node 1");
-        io.to("room01-nodeoptimizer").emit('node3',{'data':data,'ssid':via});
+        io.to("room01-nodeoptimizer").emit('node3',{'data':req.query.data,'ssid':req.query.via});
     }
     else if(req.query.nodeno==='node4')
     {
         console.log("Sending data to socket for node 1");
-        io.to("room01-nodeoptimizer").emit('node4',{'data':data,'ssid':via});
+        io.to("room01-nodeoptimizer").emit('node4',{'data':req.query.data,'ssid':req.query.via});
     }
     else if(req.query.nodeno==='node5')
     {
         console.log("Sending data to socket for node 1");
-        io.to("room01-nodeoptimizer").emit('node5',{'data':data,'ssid':via});
+        io.to("room01-nodeoptimizer").emit('node5',{'data':req.query.data,'ssid':req.query.via});
     }
     res.send("Data Received from "+req.query.data+" via"+req.query.via);
 });
