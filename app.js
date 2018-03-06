@@ -34,12 +34,12 @@ app.get('/node',function(req,res){
         case "node1":
             data1=data;
             ssid1=via;
-            io.to("room01-nodeoptimizer").emit('node1',{'data':data1,'ssid':ssid1});
+            io.to("room01-nodeoptimizer").emit('node1',{'data':"data1",'ssid':"ssid1"});
             break;
         case "node2":
             data2=data;
             ssid2=via;
-            io.to("room01-nodeoptimizer").emit('node2',{'data':data2,'ssid':ssid2});
+            io.to("room01-nodeoptimizer").emit('node2',{'data':"data2",'ssid':"ssid2"});
             break;
         case "node3":
             data3=data;
