@@ -9,8 +9,6 @@ var data=0;
 var data1=0,data2=0,data3=0,data4=0,data5=0;
 var node_no="";
 var ssid1="",ssid2="",ssid3="",ssid4="",ssid5="";
-var vig1="",vig2="",vig3="",vig4="",vig5="",vig6="",vig7="";
-var dude1="",dude2="",dude3="",dude4="",dude5="",dude6="",dude7="";
 var r = 0;
 var alpha = 0.5;
 
@@ -47,6 +45,8 @@ app.get('/node',function(req,res){
         var dude_wifi_len = req.query.dude;
         vignesh_wifi_len /=100;
         dude_wifi_len /=100;
+        console.log("Base station 1"+vignesh_wifi_len);
+        console.log("Base station 2"+dude_wifi_len);
         var d1 = (((thre[0][0] - vignesh_wifi_len) * (thre[0][0] - vignesh_wifi_len)) +
             ((thre[1][0] - vignesh_wifi_len) * (thre[1][0] - vignesh_wifi_len)) +
             ((thre[2][0] - vignesh_wifi_len) * (thre[2][0] - vignesh_wifi_len)) +
@@ -78,6 +78,8 @@ app.get('/node',function(req,res){
         var dude_wifi_len = req.query.dude;
         vignesh_wifi_len /=100;
         dude_wifi_len /=100;
+        console.log("Base station 1"+vignesh_wifi_len);
+        console.log("Base station 2"+dude_wifi_len);
         var d1 = (((thre[0][0] - vignesh_wifi_len) * (thre[0][0] - vignesh_wifi_len)) +
             ((thre[1][0] - vignesh_wifi_len) * (thre[1][0] - vignesh_wifi_len)) +
             ((thre[2][0] - vignesh_wifi_len) * (thre[2][0] - vignesh_wifi_len)) +
@@ -109,6 +111,8 @@ app.get('/node',function(req,res){
         var dude_wifi_len = req.query.dude;
         vignesh_wifi_len /=100;
         dude_wifi_len /=100;
+        console.log("Base station 1"+vignesh_wifi_len);
+        console.log("Base station 2"+dude_wifi_len);
         var d1 = (((thre[0][0] - vignesh_wifi_len) * (thre[0][0] - vignesh_wifi_len)) +
             ((thre[1][0] - vignesh_wifi_len) * (thre[1][0] - vignesh_wifi_len)) +
             ((thre[2][0] - vignesh_wifi_len) * (thre[2][0] - vignesh_wifi_len)) +
@@ -140,6 +144,8 @@ app.get('/node',function(req,res){
         var dude_wifi_len = req.query.dude;
         vignesh_wifi_len /=100;
         dude_wifi_len /=100;
+        console.log("Base station 1"+vignesh_wifi_len);
+        console.log("Base station 2"+dude_wifi_len);
         var d1 = (((thre[0][0] - vignesh_wifi_len) * (thre[0][0] - vignesh_wifi_len)) +
             ((thre[1][0] - vignesh_wifi_len) * (thre[1][0] - vignesh_wifi_len)) +
             ((thre[2][0] - vignesh_wifi_len) * (thre[2][0] - vignesh_wifi_len)) +
@@ -171,6 +177,8 @@ app.get('/node',function(req,res){
         var dude_wifi_len = req.query.dude;
         vignesh_wifi_len /=100;
         dude_wifi_len /=100;
+        console.log("Base station 1"+vignesh_wifi_len);
+        console.log("Base station 2"+dude_wifi_len);
         var d1 = (((thre[0][0] - vignesh_wifi_len) * (thre[0][0] - vignesh_wifi_len)) +
             ((thre[1][0] - vignesh_wifi_len) * (thre[1][0] - vignesh_wifi_len)) +
             ((thre[2][0] - vignesh_wifi_len) * (thre[2][0] - vignesh_wifi_len)) +
@@ -202,6 +210,8 @@ app.get('/node',function(req,res){
         var dude_wifi_len = req.query.dude;
         vignesh_wifi_len /=100;
         dude_wifi_len /=100;
+        console.log("Base station 1"+vignesh_wifi_len);
+        console.log("Base station 2"+dude_wifi_len);
         var d1 = (((thre[0][0] - vignesh_wifi_len) * (thre[0][0] - vignesh_wifi_len)) +
             ((thre[1][0] - vignesh_wifi_len) * (thre[1][0] - vignesh_wifi_len)) +
             ((thre[2][0] - vignesh_wifi_len) * (thre[2][0] - vignesh_wifi_len)) +
@@ -233,6 +243,8 @@ app.get('/node',function(req,res){
         var dude_wifi_len = req.query.dude;
         vignesh_wifi_len /=100;
         dude_wifi_len /=100;
+        console.log("Base station 1"+vignesh_wifi_len);
+        console.log("Base station 2"+dude_wifi_len);
         var d1 = (((thre[0][0] - vignesh_wifi_len) * (thre[0][0] - vignesh_wifi_len)) +
             ((thre[1][0] - vignesh_wifi_len) * (thre[1][0] - vignesh_wifi_len)) +
             ((thre[2][0] - vignesh_wifi_len) * (thre[2][0] - vignesh_wifi_len)) +
