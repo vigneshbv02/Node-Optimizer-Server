@@ -15,7 +15,7 @@ var alpha = 0.5;
 var thre = [];
 thre.push([0.2,0.5]);
 thre.push([0.4,0.7]);
-thre.push([0.6,0.1]);
+thre.push([0.6,0.9]);
 thre.push([0.8,0.3]);
 
 app.use(bodyparser.json({limit: '50mb'}));
@@ -43,12 +43,10 @@ app.get('/node',function(req,res){
         io.to("room01-nodeoptimizer").emit('node1',{'data':req.query.data,'ssid':req.query.via});
         var vignesh_wifi_len = req.query.vignesh;
         var dude_wifi_len = req.query.dude;
-        console.log("Base station 1 : "+vignesh_wifi_len);
-        console.log("Base station 2 : "+dude_wifi_len);
         vignesh_wifi_len1 =vignesh_wifi_len/100;
         dude_wifi_len1 =dude_wifi_len/100;
-        console.log("Base station 1"+vignesh_wifi_len1);
-        console.log("Base station 2"+dude_wifi_len1);
+        console.log("Base station 1 : "+vignesh_wifi_len1);
+        console.log("Base station 2 : "+dude_wifi_len1);
         var d1 = (((thre[0][0] - vignesh_wifi_len1) * (thre[0][0] - vignesh_wifi_len1)) +
             ((thre[1][0] - vignesh_wifi_len1) * (thre[1][0] - vignesh_wifi_len1)) +
             ((thre[2][0] - vignesh_wifi_len1) * (thre[2][0] - vignesh_wifi_len1)) +
