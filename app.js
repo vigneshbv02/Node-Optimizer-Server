@@ -15,7 +15,7 @@ var r = 0;
 var alpha = 0.5;
 
 var thre = [];
-thre.push([0.2,0.4]);
+thre.push([0.2,0.5]);
 thre.push([0.4,0.7]);
 thre.push([0.6,0.1]);
 thre.push([0.8,0.3]);
