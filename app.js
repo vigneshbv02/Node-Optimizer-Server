@@ -42,7 +42,7 @@ app.get('/node',function(req,res){
     if(req.query.nodeno==='node1')
     {
         console.log("Sending data to socket for node 1");
-        io.to("room01-nodeoptimizer").emit('node5',{'data':req.query.data,'ssid':req.query.via});
+        io.to("room01-nodeoptimizer").emit('node1',{'data':req.query.data,'ssid':req.query.via});
         var vignesh_wifi_len = req.query.vignesh;
         var dude_wifi_len = req.query.dude;
         vignesh_wifi_len /=100;
@@ -71,142 +71,181 @@ app.get('/node',function(req,res){
     }
     else if(req.query.nodeno==='node2')
     {
-        console.log("Sending data to socket for node 1");
+        console.log("Sending data to socket for node 2");
         io.to("room01-nodeoptimizer").emit('node2',{'data':req.query.data,'ssid':req.query.via});
-        var node_thre = [0,0,1,1];
-        var d1 = ((thre[0][0] - node_thre[0]) * (thre[0][0] - node_thre[0])) +
-            ((thre[1][0] - node_thre[1]) * (thre[1][0] - node_thre[1])) +
-            ((thre[2][0] - node_thre[2]) * (thre[2][0] - node_thre[2])) +
-            ((thre[3][0] - node_thre[3]) * (thre[2][0] - node_thre[3]));
+        var vignesh_wifi_len = req.query.vignesh;
+        var dude_wifi_len = req.query.dude;
+        vignesh_wifi_len /=100;
+        dude_wifi_len /=100;
+        var d1 = (((thre[0][0] - vignesh_wifi_len) * (thre[0][0] - vignesh_wifi_len)) +
+            ((thre[1][0] - vignesh_wifi_len) * (thre[1][0] - vignesh_wifi_len)) +
+            ((thre[2][0] - vignesh_wifi_len) * (thre[2][0] - vignesh_wifi_len)) +
+            ((thre[3][0] - vignesh_wifi_len) * (thre[2][0] - vignesh_wifi_len))).toFixed(2);
         console.log(d1);
 
-        var d2 = ((thre[0][1] - node_thre[0]) * (thre[0][1] - node_thre[0])) +
-            ((thre[1][1] - node_thre[1]) * (thre[1][1] - node_thre[1])) +
-            ((thre[2][1] - node_thre[2]) * (thre[2][1] - node_thre[2])) +
-            ((thre[3][1] - node_thre[3]) * (thre[2][1] - node_thre[3]));
+        var d2 = (((thre[0][1] - dude_wifi_len) * (thre[0][1] - dude_wifi_len)) +
+            ((thre[1][1] - dude_wifi_len) * (thre[1][1] - dude_wifi_len)) +
+            ((thre[2][1] - dude_wifi_len) * (thre[2][1] - dude_wifi_len)) +
+            ((thre[3][1] - dude_wifi_len) * (thre[2][1] - dude_wifi_len))).toFixed(2);
         console.log(d2);
         var result='';
-        if(d1<d2)
+        if(d1>d2)
         {
             result='vignesh';
-            thre[0][0]=thre[0][1]+0.5*(node_thre[0] - thre[0][0]);
-            thre[0][1]=thre[0][2]+0.5*(node_thre[1] - thre[0][1]);
-            thre[0][2]=thre[0][3]+0.5*(node_thre[2] - thre[0][2]);
-            thre[0][3]=thre[0][4]+0.5*(node_thre[3] - thre[0][3]);
         }
         else
         {
             result='dude';
-            thre[1][0]=thre[1][1]+0.5*(node_thre[0] - thre[1][0]);
-            thre[1][1]=thre[1][2]+0.5*(node_thre[1] - thre[1][1]);
-            thre[1][2]=thre[1][3]+0.5*(node_thre[2] - thre[1][2]);
-            thre[1][3]=thre[1][4]+0.5*(node_thre[3] - thre[1][3]);
         }
         res.send(result);
-        res.send();
     }
     else if(req.query.nodeno==='node3')
     {
-        console.log("Sending data to socket for node 1");
+        console.log("Sending data to socket for node 3");
         io.to("room01-nodeoptimizer").emit('node3',{'data':req.query.data,'ssid':req.query.via});
-        var node_thre = [1,0,0,0];
-        var d1 = ((thre[0][0] - node_thre[0]) * (thre[0][0] - node_thre[0])) +
-            ((thre[1][0] - node_thre[1]) * (thre[1][0] - node_thre[1])) +
-            ((thre[2][0] - node_thre[2]) * (thre[2][0] - node_thre[2])) +
-            ((thre[3][0] - node_thre[3]) * (thre[2][0] - node_thre[3]));
+        var vignesh_wifi_len = req.query.vignesh;
+        var dude_wifi_len = req.query.dude;
+        vignesh_wifi_len /=100;
+        dude_wifi_len /=100;
+        var d1 = (((thre[0][0] - vignesh_wifi_len) * (thre[0][0] - vignesh_wifi_len)) +
+            ((thre[1][0] - vignesh_wifi_len) * (thre[1][0] - vignesh_wifi_len)) +
+            ((thre[2][0] - vignesh_wifi_len) * (thre[2][0] - vignesh_wifi_len)) +
+            ((thre[3][0] - vignesh_wifi_len) * (thre[2][0] - vignesh_wifi_len))).toFixed(2);
         console.log(d1);
 
-        var d2 = ((thre[0][1] - node_thre[0]) * (thre[0][1] - node_thre[0])) +
-            ((thre[1][1] - node_thre[1]) * (thre[1][1] - node_thre[1])) +
-            ((thre[2][1] - node_thre[2]) * (thre[2][1] - node_thre[2])) +
-            ((thre[3][1] - node_thre[3]) * (thre[2][1] - node_thre[3]));
+        var d2 = (((thre[0][1] - dude_wifi_len) * (thre[0][1] - dude_wifi_len)) +
+            ((thre[1][1] - dude_wifi_len) * (thre[1][1] - dude_wifi_len)) +
+            ((thre[2][1] - dude_wifi_len) * (thre[2][1] - dude_wifi_len)) +
+            ((thre[3][1] - dude_wifi_len) * (thre[2][1] - dude_wifi_len))).toFixed(2);
         console.log(d2);
         var result='';
-        if(d1<d2)
+        if(d1>d2)
         {
             result='vignesh';
-            thre[0][0]=thre[0][1]+0.5*(node_thre[0] - thre[0][0]);
-            thre[0][1]=thre[0][2]+0.5*(node_thre[1] - thre[0][1]);
-            thre[0][2]=thre[0][3]+0.5*(node_thre[2] - thre[0][2]);
-            thre[0][3]=thre[0][4]+0.5*(node_thre[3] - thre[0][3]);
         }
         else
         {
             result='dude';
-            thre[1][0]=thre[1][1]+0.5*(node_thre[0] - thre[1][0]);
-            thre[1][1]=thre[1][2]+0.5*(node_thre[1] - thre[1][1]);
-            thre[1][2]=thre[1][3]+0.5*(node_thre[2] - thre[1][2]);
-            thre[1][3]=thre[1][4]+0.5*(node_thre[3] - thre[1][3]);
         }
         res.send(result);
     }
     else if(req.query.nodeno==='node4')
     {
-        console.log("Sending data to socket for node 1");
+        console.log("Sending data to socket for node 4");
         io.to("room01-nodeoptimizer").emit('node4',{'data':req.query.data,'ssid':req.query.via});
-        var node_thre = [0,0,1,0];
-        var d1 = ((thre[0][0] - node_thre[0]) * (thre[0][0] - node_thre[0])) +
-            ((thre[1][0] - node_thre[1]) * (thre[1][0] - node_thre[1])) +
-            ((thre[2][0] - node_thre[2]) * (thre[2][0] - node_thre[2])) +
-            ((thre[3][0] - node_thre[3]) * (thre[2][0] - node_thre[3]));
+        var vignesh_wifi_len = req.query.vignesh;
+        var dude_wifi_len = req.query.dude;
+        vignesh_wifi_len /=100;
+        dude_wifi_len /=100;
+        var d1 = (((thre[0][0] - vignesh_wifi_len) * (thre[0][0] - vignesh_wifi_len)) +
+            ((thre[1][0] - vignesh_wifi_len) * (thre[1][0] - vignesh_wifi_len)) +
+            ((thre[2][0] - vignesh_wifi_len) * (thre[2][0] - vignesh_wifi_len)) +
+            ((thre[3][0] - vignesh_wifi_len) * (thre[2][0] - vignesh_wifi_len))).toFixed(2);
         console.log(d1);
 
-        var d2 = ((thre[0][1] - node_thre[0]) * (thre[0][1] - node_thre[0])) +
-            ((thre[1][1] - node_thre[1]) * (thre[1][1] - node_thre[1])) +
-            ((thre[2][1] - node_thre[2]) * (thre[2][1] - node_thre[2])) +
-            ((thre[3][1] - node_thre[3]) * (thre[2][1] - node_thre[3]));
+        var d2 = (((thre[0][1] - dude_wifi_len) * (thre[0][1] - dude_wifi_len)) +
+            ((thre[1][1] - dude_wifi_len) * (thre[1][1] - dude_wifi_len)) +
+            ((thre[2][1] - dude_wifi_len) * (thre[2][1] - dude_wifi_len)) +
+            ((thre[3][1] - dude_wifi_len) * (thre[2][1] - dude_wifi_len))).toFixed(2);
         console.log(d2);
         var result='';
-        if(d1<d2)
+        if(d1>d2)
         {
             result='vignesh';
-            thre[0][0]=thre[0][1]+0.5*(node_thre[0] - thre[0][0]);
-            thre[0][1]=thre[0][2]+0.5*(node_thre[1] - thre[0][1]);
-            thre[0][2]=thre[0][3]+0.5*(node_thre[2] - thre[0][2]);
-            thre[0][3]=thre[0][4]+0.5*(node_thre[3] - thre[0][3]);
         }
         else
         {
             result='dude';
-            thre[1][0]=thre[1][1]+0.5*(node_thre[0] - thre[1][0]);
-            thre[1][1]=thre[1][2]+0.5*(node_thre[1] - thre[1][1]);
-            thre[1][2]=thre[1][3]+0.5*(node_thre[2] - thre[1][2]);
-            thre[1][3]=thre[1][4]+0.5*(node_thre[3] - thre[1][3]);
         }
         res.send(result);
     }
     else if(req.query.nodeno==='node5')
     {
-        console.log("Sending data to socket for node 1");
+        console.log("Sending data to socket for node 5");
         io.to("room01-nodeoptimizer").emit('node5',{'data':req.query.data,'ssid':req.query.via});
-        var node_thre = [0,0,0,1];
-        var d1 = parseFloat((((thre[0][0] - node_thre[0]) * (thre[0][0] - node_thre[0])) +
-            ((thre[1][0] - node_thre[1]) * (thre[1][0] - node_thre[1])) +
-            ((thre[2][0] - node_thre[2]) * (thre[2][0] - node_thre[2])) +
-            ((thre[3][0] - node_thre[3]) * (thre[2][0] - node_thre[3]))).toString()).toFixed(2);
+        var vignesh_wifi_len = req.query.vignesh;
+        var dude_wifi_len = req.query.dude;
+        vignesh_wifi_len /=100;
+        dude_wifi_len /=100;
+        var d1 = (((thre[0][0] - vignesh_wifi_len) * (thre[0][0] - vignesh_wifi_len)) +
+            ((thre[1][0] - vignesh_wifi_len) * (thre[1][0] - vignesh_wifi_len)) +
+            ((thre[2][0] - vignesh_wifi_len) * (thre[2][0] - vignesh_wifi_len)) +
+            ((thre[3][0] - vignesh_wifi_len) * (thre[2][0] - vignesh_wifi_len))).toFixed(2);
         console.log(d1);
 
-        var d2 = parseFloat((((thre[0][1] - node_thre[0]) * (thre[0][1] - node_thre[0])) +
-            ((thre[1][1] - node_thre[1]) * (thre[1][1] - node_thre[1])) +
-            ((thre[2][1] - node_thre[2]) * (thre[2][1] - node_thre[2])) +
-            ((thre[3][1] - node_thre[3]) * (thre[2][1] - node_thre[3]))).toString()).toFixed(2);
+        var d2 = (((thre[0][1] - dude_wifi_len) * (thre[0][1] - dude_wifi_len)) +
+            ((thre[1][1] - dude_wifi_len) * (thre[1][1] - dude_wifi_len)) +
+            ((thre[2][1] - dude_wifi_len) * (thre[2][1] - dude_wifi_len)) +
+            ((thre[3][1] - dude_wifi_len) * (thre[2][1] - dude_wifi_len))).toFixed(2);
         console.log(d2);
         var result='';
-        if(d1<d2)
+        if(d1>d2)
         {
             result='vignesh';
-            thre[0][0]=parseFloat((thre[0][1]+0.5*(node_thre[0] - thre[0][0])).toString()).toFixed(2);
-            thre[0][1]=parseFloat((thre[0][2]+0.5*(node_thre[1] - thre[0][1])).toString()).toFixed(2);
-            thre[0][2]=parseFloat((thre[0][3]+0.5*(node_thre[2] - thre[0][2])).toString()).toFixed(2);
-            thre[0][3]=parseFloat((thre[0][4]+0.5*(node_thre[3] - thre[0][3])).toString()).toFixed(2);
         }
         else
         {
             result='dude';
-            thre[1][0]=parseFloat((thre[1][1]+0.5*(node_thre[0] - thre[1][0])).toString()).toFixed(2);
-            thre[1][1]=parseFloat((thre[1][2]+0.5*(node_thre[1] - thre[1][1])).toString()).toFixed(2);
-            thre[1][2]=parseFloat((thre[1][3]+0.5*(node_thre[2] - thre[1][2])).toString()).toFixed(2);
-            thre[1][3]=parseFloat((thre[1][4]+0.5*(node_thre[3] - thre[1][3])).toString()).toFixed(2);
+        }
+        res.send(result);
+    }
+    else if(req.query.nodeno==='node6')
+    {
+        console.log("Sending data to socket for node 6");
+        io.to("room01-nodeoptimizer").emit('node6',{'data':req.query.data,'ssid':req.query.via});
+        var vignesh_wifi_len = req.query.vignesh;
+        var dude_wifi_len = req.query.dude;
+        vignesh_wifi_len /=100;
+        dude_wifi_len /=100;
+        var d1 = (((thre[0][0] - vignesh_wifi_len) * (thre[0][0] - vignesh_wifi_len)) +
+            ((thre[1][0] - vignesh_wifi_len) * (thre[1][0] - vignesh_wifi_len)) +
+            ((thre[2][0] - vignesh_wifi_len) * (thre[2][0] - vignesh_wifi_len)) +
+            ((thre[3][0] - vignesh_wifi_len) * (thre[2][0] - vignesh_wifi_len))).toFixed(2);
+        console.log(d1);
+
+        var d2 = (((thre[0][1] - dude_wifi_len) * (thre[0][1] - dude_wifi_len)) +
+            ((thre[1][1] - dude_wifi_len) * (thre[1][1] - dude_wifi_len)) +
+            ((thre[2][1] - dude_wifi_len) * (thre[2][1] - dude_wifi_len)) +
+            ((thre[3][1] - dude_wifi_len) * (thre[2][1] - dude_wifi_len))).toFixed(2);
+        console.log(d2);
+        var result='';
+        if(d1>d2)
+        {
+            result='vignesh';
+        }
+        else
+        {
+            result='dude';
+        }
+        res.send(result);
+    }
+    else if(req.query.nodeno==='node7')
+    {
+        console.log("Sending data to socket for node 7");
+        io.to("room01-nodeoptimizer").emit('node7',{'data':req.query.data,'ssid':req.query.via});
+        var vignesh_wifi_len = req.query.vignesh;
+        var dude_wifi_len = req.query.dude;
+        vignesh_wifi_len /=100;
+        dude_wifi_len /=100;
+        var d1 = (((thre[0][0] - vignesh_wifi_len) * (thre[0][0] - vignesh_wifi_len)) +
+            ((thre[1][0] - vignesh_wifi_len) * (thre[1][0] - vignesh_wifi_len)) +
+            ((thre[2][0] - vignesh_wifi_len) * (thre[2][0] - vignesh_wifi_len)) +
+            ((thre[3][0] - vignesh_wifi_len) * (thre[2][0] - vignesh_wifi_len))).toFixed(2);
+        console.log(d1);
+
+        var d2 = (((thre[0][1] - dude_wifi_len) * (thre[0][1] - dude_wifi_len)) +
+            ((thre[1][1] - dude_wifi_len) * (thre[1][1] - dude_wifi_len)) +
+            ((thre[2][1] - dude_wifi_len) * (thre[2][1] - dude_wifi_len)) +
+            ((thre[3][1] - dude_wifi_len) * (thre[2][1] - dude_wifi_len))).toFixed(2);
+        console.log(d2);
+        var result='';
+        if(d1>d2)
+        {
+            result='vignesh';
+        }
+        else
+        {
+            result='dude';
         }
         res.send(result);
     }
