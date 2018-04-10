@@ -59,7 +59,7 @@ app.get('/node',function(req,res){
             ((thre[3][1] - dude_wifi_len) * (thre[2][1] - dude_wifi_len))).toFixed(2);
         console.log(d2);
         var result='';
-        if(d1<d2)
+        if(d1>d2)
         {
             result='vignesh';
         }
