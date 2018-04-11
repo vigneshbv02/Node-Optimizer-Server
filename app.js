@@ -54,7 +54,6 @@ app.get('/node',function(req,res){
     {
         console.log("Sending data to socket for node 1");
         var daa=(parseInt(req.query.data) + parseInt(private_key));
-        console.log(daa);
         var da1 = daa % mod_value;
         console.log("Decrypted value " + da1 );
         io.to("room01-nodeoptimizer").emit('node1',{'data':da1,'ssid':req.query.via});
@@ -90,7 +89,8 @@ app.get('/node',function(req,res){
     else if(req.query.nodeno==='node2')
     {
         console.log("Sending data to socket for node 2");
-        var da1 = (req.query.data + private_key) % mod_value;
+        var daa=(parseInt(req.query.data) + parseInt(private_key));
+        var da1 = daa % mod_value;
         console.log("Decrypted value " + da1 );
         io.to("room01-nodeoptimizer").emit('node2',{'data':da1,'ssid':req.query.via});
         var vignesh_wifi_len = req.query.vignesh;
@@ -125,7 +125,8 @@ app.get('/node',function(req,res){
     else if(req.query.nodeno==='node3')
     {
         console.log("Sending data to socket for node 3");
-        var da1 = (req.query.data + private_key) % mod_value;
+        var daa=(parseInt(req.query.data) + parseInt(private_key));
+        var da1 = daa % mod_value;
         console.log("Decrypted value " + da1 );
         io.to("room01-nodeoptimizer").emit('node3',{'data':da1,'ssid':req.query.via});
         var vignesh_wifi_len = req.query.vignesh;
@@ -160,7 +161,8 @@ app.get('/node',function(req,res){
     else if(req.query.nodeno==='node4')
     {
         console.log("Sending data to socket for node 4");
-        var da1 = (req.query.data + private_key) % mod_value;
+        var daa=(parseInt(req.query.data) + parseInt(private_key));
+        var da1 = daa % mod_value;
         console.log("Decrypted value " + da1 );
         io.to("room01-nodeoptimizer").emit('node4',{'data':da1,'ssid':req.query.via});
         var vignesh_wifi_len = req.query.vignesh;
@@ -195,7 +197,8 @@ app.get('/node',function(req,res){
     else if(req.query.nodeno==='node5')
     {
         console.log("Sending data to socket for node 5");
-        var da1 = (req.query.data + private_key) % mod_value;
+        var daa=(parseInt(req.query.data) + parseInt(private_key));
+        var da1 = daa % mod_value;
         console.log("Decrypted value " + da1 );
         io.to("room01-nodeoptimizer").emit('node5',{'data':da1,'ssid':req.query.via});
         var vignesh_wifi_len = req.query.vignesh;
@@ -230,7 +233,8 @@ app.get('/node',function(req,res){
     else if(req.query.nodeno==='node6')
     {
         console.log("Sending data to socket for node 6");
-        var da1 = (req.query.data + private_key) % mod_value;
+        var daa=(parseInt(req.query.data) + parseInt(private_key));
+        var da1 = daa % mod_value;
         console.log("Decrypted value " + da1 );
         io.to("room01-nodeoptimizer").emit('node6',{'data':da1,'ssid':req.query.via});
         var vignesh_wifi_len = req.query.vignesh;
@@ -265,7 +269,8 @@ app.get('/node',function(req,res){
     else if(req.query.nodeno==='node7')
     {
         console.log("Sending data to socket for node 7");
-        var da1 = (req.query.data + private_key) % mod_value;
+        var daa=(parseInt(req.query.data) + parseInt(private_key));
+        var da1 = daa % mod_value;
         console.log("Decrypted value " + da1 );
         io.to("room01-nodeoptimizer").emit('node7',{'data':da1,'ssid':req.query.via});
         var vignesh_wifi_len = req.query.vignesh;
