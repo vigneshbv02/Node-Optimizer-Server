@@ -53,7 +53,9 @@ app.get('/node',function(req,res){
     if(req.query.nodeno==='node1')
     {
         console.log("Sending data to socket for node 1");
-        var da1 = (req.query.data + private_key) % mod_value;
+        var daa=(req.query.data + private_key);
+        console.log(daa);
+        var da1 = daa % mod_value;
         console.log("Decrypted value " + da1 );
         io.to("room01-nodeoptimizer").emit('node1',{'data':da1,'ssid':req.query.via});
         var vignesh_wifi_len = req.query.vignesh;
