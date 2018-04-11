@@ -75,11 +75,11 @@ app.get('/node',function(req,res){
             ((thre[3][1] - dude_wifi_len1) * (thre[2][1] - dude_wifi_len1))).toFixed(2);
         console.log(d2);
         var result='';
-        if(d1<d2 && d1 !== 0)
+        if(vignesh_wifi_len1<dude_wifi_len1 && vignesh_wifi_len1 !== 0)
         {
             result='vignesh';
         }
-        else if(d1>=d2&& d2 !== 0)
+        else if(vignesh_wifi_len1>=dude_wifi_len1&& dude_wifi_len1 !== 0)
         {
             result='dude';
         }
@@ -111,11 +111,11 @@ app.get('/node',function(req,res){
             ((thre[3][1] - dude_wifi_len1) * (thre[2][1] - dude_wifi_len1))).toFixed(2);
         console.log(d2);
         var result='';
-        if(d1<d2 && d1 !== 0)
+        if(vignesh_wifi_len1<dude_wifi_len1 && vignesh_wifi_len1 !== 0)
         {
             result='vignesh';
         }
-        else if(d1>=d2&& d2 !== 0)
+        else if(vignesh_wifi_len1>=dude_wifi_len1&& dude_wifi_len1 !== 0)
         {
             result='dude';
         }
@@ -147,11 +147,11 @@ app.get('/node',function(req,res){
             ((thre[3][1] - dude_wifi_len1) * (thre[2][1] - dude_wifi_len1))).toFixed(2);
         console.log(d2);
         var result='';
-        if(d1<d2 && d1 !== 0)
+        if(vignesh_wifi_len1<dude_wifi_len1 && vignesh_wifi_len1 !== 0)
         {
             result='vignesh';
         }
-        else if(d1>=d2&& d2 !== 0)
+        else if(vignesh_wifi_len1>=dude_wifi_len1&& dude_wifi_len1 !== 0)
         {
             result='dude';
         }
@@ -183,11 +183,11 @@ app.get('/node',function(req,res){
             ((thre[3][1] - dude_wifi_len1) * (thre[2][1] - dude_wifi_len1))).toFixed(2);
         console.log(d2);
         var result='';
-        if(d1<d2 && d1 !== 0)
+        if(vignesh_wifi_len1<dude_wifi_len1 && vignesh_wifi_len1 !== 0)
         {
             result='vignesh';
         }
-        else if(d1>=d2&& d2 !== 0)
+        else if(vignesh_wifi_len1>=dude_wifi_len1&& dude_wifi_len1 !== 0)
         {
             result='dude';
         }
@@ -219,11 +219,11 @@ app.get('/node',function(req,res){
             ((thre[3][1] - dude_wifi_len1) * (thre[2][1] - dude_wifi_len1))).toFixed(2);
         console.log(d2);
         var result='';
-        if(d1<d2 && d1 !== 0)
+        if(vignesh_wifi_len1<dude_wifi_len1 && vignesh_wifi_len1 !== 0)
         {
             result='vignesh';
         }
-        else if(d1>=d2&& d2 !== 0)
+        else if(vignesh_wifi_len1>=dude_wifi_len1&& dude_wifi_len1 !== 0)
         {
             result='dude';
         }
@@ -255,11 +255,11 @@ app.get('/node',function(req,res){
             ((thre[3][1] - dude_wifi_len1) * (thre[2][1] - dude_wifi_len1))).toFixed(2);
         console.log(d2);
         var result='';
-        if(d1<d2 && d1 !== 0)
+        if(vignesh_wifi_len1<dude_wifi_len1 && vignesh_wifi_len1 !== 0)
         {
             result='vignesh';
         }
-        else if(d1>=d2&& d2 !== 0)
+        else if(vignesh_wifi_len1>=dude_wifi_len1&& dude_wifi_len1 !== 0)
         {
             result='dude';
         }
@@ -291,11 +291,11 @@ app.get('/node',function(req,res){
             ((thre[3][1] - dude_wifi_len1) * (thre[2][1] - dude_wifi_len1))).toFixed(2);
         console.log(d2);
         var result='';
-        if(d1<d2 && d1 !== 0)
+        if(vignesh_wifi_len1<dude_wifi_len1 && vignesh_wifi_len1 !== 0)
         {
             result='vignesh';
         }
-        else if(d1>=d2&& d2 !== 0)
+        else if(vignesh_wifi_len1>=dude_wifi_len1&& dude_wifi_len1 !== 0)
         {
             result='dude';
         }
