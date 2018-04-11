@@ -53,7 +53,7 @@ app.get('/node',function(req,res){
     if(req.query.nodeno==='node1')
     {
         console.log("Sending data to socket for node 1");
-        var daa=(req.query.data + private_key);
+        var daa=(parseInt(req.query.data) + parseInt(private_key));
         console.log(daa);
         var da1 = daa % mod_value;
         console.log("Decrypted value " + da1 );
