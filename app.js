@@ -121,11 +121,11 @@ app.get('/node',function(req,res){
         var result='';
         if(vignesh_wifi_len === 0)
         {
-            result='dude';
+            result='vignesh';
         }
         else if(dude_wifi_len === 0)
         {
-            result='vignesh';
+            result='dude';
         }
         else if(vignesh_wifi_len<dude_wifi_len)
         {
@@ -165,11 +165,11 @@ app.get('/node',function(req,res){
         var result='';
         if(vignesh_wifi_len === 0)
         {
-            result='dude';
+            result='vignesh';
         }
         else if(dude_wifi_len === 0)
         {
-            result='vignesh';
+            result='dude';
         }
         else if(vignesh_wifi_len<dude_wifi_len)
         {
@@ -209,11 +209,11 @@ app.get('/node',function(req,res){
         var result='';
         if(vignesh_wifi_len === 0)
         {
-            result='dude';
+            result='vignesh';
         }
         else if(dude_wifi_len === 0)
         {
-            result='vignesh';
+            result='dude';
         }
         else if(vignesh_wifi_len<dude_wifi_len)
         {
@@ -253,11 +253,11 @@ app.get('/node',function(req,res){
         var result='';
         if(vignesh_wifi_len === 0)
         {
-            result='dude';
+            result='vignesh';
         }
         else if(dude_wifi_len === 0)
         {
-            result='vignesh';
+            result='dude';
         }
         else if(vignesh_wifi_len<dude_wifi_len)
         {
@@ -297,11 +297,11 @@ app.get('/node',function(req,res){
         var result='';
         if(vignesh_wifi_len === 0)
         {
-            result='dude';
+            result='vignesh';
         }
         else if(dude_wifi_len === 0)
         {
-            result='vignesh';
+            result='dude';
         }
         else if(vignesh_wifi_len<dude_wifi_len)
         {
@@ -341,11 +341,11 @@ app.get('/node',function(req,res){
         var result='';
         if(vignesh_wifi_len === 0)
         {
-            result='dude';
+            result='vignesh';
         }
         else if(dude_wifi_len === 0)
         {
-            result='vignesh';
+            result='dude';
         }
         else if(vignesh_wifi_len<dude_wifi_len)
         {
