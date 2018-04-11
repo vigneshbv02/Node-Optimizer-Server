@@ -83,7 +83,7 @@ app.get('/node',function(req,res){
         {
             result='vignesh';
         }
-        if(vignesh_wifi_len<dude_wifi_len)
+        else if(vignesh_wifi_len<dude_wifi_len)
         {
             result='vignesh';
         }
@@ -127,7 +127,7 @@ app.get('/node',function(req,res){
         {
             result='vignesh';
         }
-        if(vignesh_wifi_len<dude_wifi_len)
+        else if(vignesh_wifi_len<dude_wifi_len)
         {
             result='vignesh';
         }
@@ -171,7 +171,7 @@ app.get('/node',function(req,res){
         {
             result='vignesh';
         }
-        if(vignesh_wifi_len<dude_wifi_len)
+        else if(vignesh_wifi_len<dude_wifi_len)
         {
             result='vignesh';
         }
@@ -215,7 +215,7 @@ app.get('/node',function(req,res){
         {
             result='vignesh';
         }
-        if(vignesh_wifi_len<dude_wifi_len)
+        else if(vignesh_wifi_len<dude_wifi_len)
         {
             result='vignesh';
         }
@@ -259,7 +259,7 @@ app.get('/node',function(req,res){
         {
             result='vignesh';
         }
-        if(vignesh_wifi_len<dude_wifi_len)
+        else if(vignesh_wifi_len<dude_wifi_len)
         {
             result='vignesh';
         }
@@ -303,7 +303,7 @@ app.get('/node',function(req,res){
         {
             result='vignesh';
         }
-        if(vignesh_wifi_len<dude_wifi_len)
+        else if(vignesh_wifi_len<dude_wifi_len)
         {
             result='vignesh';
         }
@@ -347,7 +347,7 @@ app.get('/node',function(req,res){
         {
             result='vignesh';
         }
-        if(vignesh_wifi_len<dude_wifi_len)
+        else if(vignesh_wifi_len<dude_wifi_len)
         {
             result='vignesh';
         }
