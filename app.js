@@ -49,6 +49,7 @@ app.get('/node',function(req,res){
     console.log(req.query.data);
     console.log(req.query.via);
     console.log(req.query.nodeno);
+    console.log(private_key);
     if(req.query.nodeno==='node1')
     {
         console.log("Sending data to socket for node 1");
